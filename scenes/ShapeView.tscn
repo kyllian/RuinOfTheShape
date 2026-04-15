@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://src/Interaction/ShapeView.cs" id="1"]
+[ext_resource type="Resource" path="res://resources/WrappingPresentationSettings_Default.tres" id="2"]
+
+[node name="ShapeView" type="Node3D"]
+script = ExtResource("1")
+wrapping_settings = ExtResource("2")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+position = Vector3(0, 7, 12)
+rotation = Vector3(-0.45, 0, 0)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+position = Vector3(0, 6, 0)
+rotation = Vector3(-0.9, 0.4, 0)
+light_energy = 1.15

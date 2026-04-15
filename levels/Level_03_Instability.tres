@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/LevelData/LevelDefinitionResource.cs" id="1"]
+
+[resource]
+script = ExtResource("1")
+LevelId = "Level_03_Instability"
+ShapeType = 0
+InstabilityTrigger = 1
+Faces = Array[Resource]([Resource("res://levels/_Face_Front.tres"), Resource("res://levels/_Face_Back.tres")])
+ActiveFaceIds = Array[String](["Front", "Back"])
+Portals = Array[Resource]([Resource("res://levels/_Portal_FrontToBack.tres"), Resource("res://levels/_Portal_BackToFront.tres"), Resource("res://levels/_Portal_ToCore_Final.tres")])
+Goal = Resource("res://levels/_Goal_CoreViaFinalPortal.tres")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/LevelData/LevelDefinitionResource.cs" id="1"]
+
+[resource]
+script = ExtResource("1")
+LevelId = "Level_01_OneSided"
+ShapeType = 0
+InstabilityTrigger = 0
+Faces = Array[Resource]([Resource("res://levels/_Face_Front.tres"), Resource("res://levels/_Face_Back.tres")])
+ActiveFaceIds = Array[String](["Front"])
+Portals = Array[Resource]([])
+Goal = Resource("res://levels/_Goal_CoreViaFinalPortal.tres")

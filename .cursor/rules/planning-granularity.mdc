@@ -1,0 +1,13 @@
+---
+description: Planning granularity and phase-gate discipline
+alwaysApply: true
+---
+
+# Planning Granularity
+
+- Keep high-level stream intent in `docs/ROADMAP/subplans/`.
+- Keep volatile day-to-day details in `docs/EXECUTION/`.
+- Maintain detailed plans for current and next phase; keep later phases concise.
+- Phase transitions should update roadmap status, execution checklist, and any resulting decisions.
+- For planning updates, milestone edits, or phase-transition tasks, run `.cursor/skills/docs-phase-planning-maintainer/SKILL.md`.
+- If the task is an implementation request that may affect planning docs, run `.cursor/skills/docs-implementation-gate/SKILL.md` and include a planning pass.

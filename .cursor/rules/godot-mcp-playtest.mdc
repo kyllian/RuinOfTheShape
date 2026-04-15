@@ -1,0 +1,16 @@
+---
+description: After gameplay-affecting implementation, run the project via Godot MCP for manual testing.
+alwaysApply: true
+---
+
+# Godot MCP playtest after implementation
+
+When you finish a **feature**, **enhancement**, or **bugfix** that changes runtime behavior (C#, GDScript, scenes, shaders, level data, Godot project settings, or other game-facing assets), you must leave the project in a **manually testable** state:
+
+1. **Run the game through the Godot MCP** (not only the shell), using the `run_project` tool on this repo’s Godot MCP server, with `projectPath` set to the **repository root** (absolute path).
+2. Call **`get_debug_output`** with `{}` and report a short summary (startup lines, obvious errors) so the user knows what to expect in the running build.
+3. If `run_project` reports the game is already running, use **`get_debug_output`** first; if a clean restart is needed, use the Godot MCP **`stop_project`** tool when available, then run again.
+
+Do **not** treat local `godot` CLI or ad-hoc exports as a substitute unless the user explicitly asked for that instead of MCP.
+
+Follow `.cursor/skills/godot-mcp-playtest/SKILL.md` for the exact checklist. When also following `.cursor/skills/docs-implementation-gate/SKILL.md`, perform the Godot MCP playtest **after** code changes are verified and **before** you consider the implementation task complete.

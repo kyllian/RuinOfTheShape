@@ -1,0 +1,14 @@
+---
+description: Graphics principles for readability and low-art dependency
+alwaysApply: true
+---
+
+# Graphics Principles
+
+- Prioritize readability and deterministic visual communication over visual spectacle.
+- Prefer geometry, palette, and shader-driven approaches over bespoke art asset dependency.
+- Do not introduce effects that obscure item state, routing state, portal state, or topology state.
+- If visual behavior changes gameplay comprehension, update graphics architecture and roadmap docs in the same task.
+- For graphics-related implementation work, run `.cursor/skills/docs-implementation-gate/SKILL.md`.
+- During graphics behavior changes, run `.cursor/skills/docs-change-policy-enforcer/SKILL.md` to enforce same-task documentation updates.
+- If graphics guidance conflicts across docs, run `.cursor/skills/docs-source-truth-resolver/SKILL.md` before choosing implementation direction.

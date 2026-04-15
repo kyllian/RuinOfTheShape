@@ -1,0 +1,16 @@
+---
+description: Keep graphics docs synchronized with implementation changes
+alwaysApply: true
+---
+
+# Documentation Source of Truth
+
+- Treat `docs/ARCHITECTURE/GRAPHICS_PIPELINE.md` as canonical for graphics behavior and constraints.
+- If changing graphics behavior, update relevant docs under `docs/ARCHITECTURE/`, `docs/ROADMAP/`, and `docs/EXECUTION/` in the same task.
+- If implementation conflicts with durable assumptions, add or update an ADR under `docs/ADR/`.
+- Do not leave accepted behavior changes undocumented.
+- For any build/enhancement/bugfix request, run `.cursor/skills/docs-implementation-gate/SKILL.md` as the default docs workflow.
+- When docs conflict or authority is unclear, run `.cursor/skills/docs-source-truth-resolver/SKILL.md` before implementation.
+- After behavior/scope/assumption changes, run `.cursor/skills/docs-change-policy-enforcer/SKILL.md` before finalizing.
+- If a durable decision or locked assumption changes, run `.cursor/skills/docs-adr-decision-recorder/SKILL.md`.
+- If a new documentation artifact is needed, run `.cursor/skills/docs-template-author/SKILL.md`.

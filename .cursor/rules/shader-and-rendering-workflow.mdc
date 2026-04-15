@@ -1,0 +1,12 @@
+---
+description: Shader and rendering workflow safeguards
+globs: **/*.{gdshader,shader,gd,cs}
+alwaysApply: false
+---
+
+# Shader and Rendering Workflow
+
+- For non-trivial shader/rendering changes, include debug visualization hooks or inspection toggles.
+- Document known artifacts and fallback behavior for non-critical effects.
+- Validate performance impact for representative scenes before considering the change complete.
+- Keep rendering code downstream from simulation and topology truth; do not encode gameplay authority in visual logic.

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://src/Presentation/EdgePresentationSettings.cs" id="1"]
+
+[resource]
+script = ExtResource("1")
+quality_tier = 1
+edge_threshold = 0.075
+edge_intensity = 0.55
+neighbor_soften = 0.38
+edge_tint = Color(0.02, 0.02, 0.045, 1)

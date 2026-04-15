@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeSubmitPrompt": [
+      {
+        "command": "python .cursor/hooks/before-submit-docs-gate.py",
+        "matcher": "UserPromptSubmit"
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": "python .cursor/hooks/subagent-docs-gate.py",
+        "matcher": "generalPurpose|explore|shell",
+        "failClosed": true
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "python .cursor/hooks/before-shell-docs-gate.py",
+        "matcher": "dotnet|godot|python|git|msbuild|cmake|ninja|make",
+        "failClosed": true
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "python .cursor/hooks/after-file-edit-doc-audit.py",
+        "matcher": "Write|TabWrite"
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "python .cursor/hooks/post-tool-use-godot-playtest-nudge.py",
+        "matcher": "Write|StrReplace"
+      }
+    ],
+    "stop": [
+      {
+        "command": "python .cursor/hooks/stop-doc-compliance.py",
+        "loop_limit": 1
+      }
+    ]
+  }
+}
